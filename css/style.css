@@ -391,20 +391,13 @@ body {
   cursor: pointer;
 }
 
+/* ------ INPUT Прайс-лист -----*/
+
 .header__logo-search {
-  width: 195px;
-  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #cd9933;
-  border-radius: 18px;
-}
-
-.header__logo-search-pic {
-  width: 19px;
-  height: 19px;
-  padding-right: 6px;
+  position: relative;
 }
 
 .header__logo-search-input {
@@ -414,9 +407,35 @@ body {
   line-height: 24px;
   width: 110px;
   height: 24px;
-  color: #7e7e7e;
-  border: none;
-  padding-left: 6px;
+  border: 1px solid #cd9933;
+  border-radius: 18px;
+  padding-left: 56px;
+  width: 195px;
+  height: 36px;
+  background: url('../img/svg/search.svg') 20px 8px / 19px 19px no-repeat, #ffffff;
+}
+
+.header__logo-search-input::placeholder {
+  color: #1d252e;
+}
+
+.header__logo-search-input:hover {
+  background: url('../img/svg/search-white.svg') 20px 8px / 19px 19px no-repeat,
+    rgba(205, 153, 51, 1);
+}
+
+.header__logo-search-input:hover::placeholder {
+  color: #ffffff;
+}
+
+.header__logo-search-input:focus {
+  outline: none;
+  border: 2px solid #cd9933;
+  background: url('../img/svg/search.svg') 20px 8px / 19px 19px no-repeat, #ffffff;
+}
+
+.header__logo-search-input:focus::placeholder {
+  color: #1d252e;
 }
 
 /* ---------- MAIN  ---------- */
@@ -597,41 +616,34 @@ body {
   margin-right: 10px;
 }
 
+/* ------ Basket -----*/
+
 .basket {
-  position: relative;
-  margin-right: 20px;
+  width: 52px;
+  height: 52px;
+  background: url('../img/svg/basket.svg') 20px 14px / 24px 18px no-repeat,
+    url('../img/svg/basket-plus.svg') 6px 12px / 12px 42px no-repeat,
+    url('../img/svg/basket-wheel.svg') 37px 33px / 4px 4px no-repeat,
+    url('../img/svg/basket-wheel.svg') 27px 11px / 4px 49px no-repeat,
+    url('../img/svg/basket-circle.svg');
 }
 
-.basket p:nth-child(1) {
-  position: absolute;
-  top: -7px;
-  left: 19px;
-  z-index: 10;
+.basket:hover {
+  background: url('../img/svg/basket.svg') 20px 14px / 24px 18px no-repeat,
+    url('../img/svg/basket-plus.svg') 6px 12px / 12px 42px no-repeat,
+    url('../img/svg/basket-wheel.svg') 37px 33px / 4px 4px no-repeat,
+    url('../img/svg/basket-wheel.svg') 27px 11px / 4px 49px no-repeat,
+    url('../img/svg/basket-circle-hovered.svg');
 }
 
-.basket p:nth-child(2) {
-  position: absolute;
-  top: -25px;
-  left: 0;
+.basket a {
+  cursor: pointer;
 }
 
-.basket p:nth-child(3) {
-  position: absolute;
-  top: -2px;
-  left: 10px;
-  z-index: 10;
-}
-
-.basket p:nth-child(4) {
-  position: absolute;
-  top: 5px;
-  left: 35px;
-  z-index: 10;
-}
-
-.basket p:nth-child(5) {
-  position: absolute;
-  top: 5px;
-  left: 25px;
-  z-index: 10;
+.price-info a:checked .basket {
+  background: url('../img/svg/basket.svg') 20px 14px / 24px 18px no-repeat,
+    url('../img/svg/basket-plus.svg') 6px 12px / 12px 42px no-repeat,
+    url('../img/svg/basket-wheel.svg') 37px 33px / 4px 4px no-repeat,
+    url('../img/svg/basket-wheel.svg') 27px 11px / 4px 49px no-repeat,
+    url('../img/svg/basket-circle-focused.svg');
 }
