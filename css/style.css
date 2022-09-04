@@ -373,7 +373,7 @@ body {
 
 .header__info-lang > p {
   position: absolute;
-  top: -10px;
+  top: -12px;
   left: 40px;
   z-index: 10;
 }
@@ -384,10 +384,12 @@ body {
   left: 0px;
   list-style: none;
   width: 61px;
-  padding-left: 7px;
   margin: auto;
+}
+
+.header__info-lang ul li {
+  padding-left: 7px;
   background: #1d252e;
-  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
 }
 
 .header__info-lang ul div {
@@ -395,29 +397,34 @@ body {
   padding-left: 3px;
   padding-top: 6px;
   padding-bottom: 6px;
+}
+
+.header__info-lang ul li:nth-child(2),
+ul li:nth-child(3) {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+}
+
+.header__info-lang ul ~ div {
+  border-bottom: 0;
+}
+
+.header__info-lang:hover ul > li {
+  opacity: 1;
+}
+
+.header__info-lang:hover ul {
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
+}
+
+.header__info-lang:hover ul li:nth-child(1) div,
+ul li:nth-child(2) div {
   border-bottom: 1px solid #016da6;
 }
 
-.header__info-lang ul li:last-child div {
-  border-bottom: 0;
-}
-
-/* .header__info-lang ul li:nth-child(2),
-li:nth-child(3) {
-  height: 0;
-} */
-
-/* .header__info-lang ul li:nth-child(1) div,
-li:nth-child(2) div {
-  border-bottom: 0;
-} */
-
-.header__info-lang p:hover {
-  cursor: pointer;
-}
-
-.header__info-lang ul li:first-child:hover {
-  cursor: pointer;
+.header__info-lang:hover p {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
 }
 
 /*-----   -----*/
