@@ -661,109 +661,105 @@ ul li:nth-child(2) div {
 
 .services-list {
   width: 157px;
-  position: relative;
+  height: 399px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  display: flex;
-  align-items: center;
   color: #0084ca;
-  margin-right: 0px;
+  margin-top: 10px;
 }
 
 .services-list ul {
   width: 100%;
+  position: relative;
 }
 
-.services-list ul li:nth-child(1) {
-  background: url('../img/svg/shevron-blue-down.svg') 95px 1px / 12px 24px no-repeat;
+.services-list ul li.services-list__item:nth-child(1) {
+  position: absolute;
+  top: 0px;
 }
 
-.services-list ul li:nth-child(2) {
-  background: url('../img/svg/shevron-blue-down.svg') 101px 1px / 12px 24px no-repeat;
+.services-list ul li.services-list__item:nth-child(2) {
+  position: absolute;
+  top: 26px;
 }
 
 .services-list ul li:nth-child(3) {
-  background: url('../img/svg/shevron-blue-down.svg') 138px 1px / 12px 24px no-repeat;
+  position: absolute;
+  top: 52px;
 }
 
 .services-list ul li:nth-child(4) {
-  background: url('../img/svg/shevron-blue-down.svg') 95px 1px / 12px 24px no-repeat;
+  position: absolute;
+  top: 78px;
 }
 
 .services-list ul li:nth-child(5) {
-  background: url('../img/svg/shevron-blue-down.svg') 101px 1px / 12px 24px no-repeat;
+  position: absolute;
+  top: 104px;
 }
 
 .services-list ul li:nth-child(6) {
-  background: url('../img/svg/shevron-blue-down.svg') 138px 1px / 12px 24px no-repeat;
-}
-
-/* .services-list ul li {
-  transition: all 0.7s ease 0s;
-}
-
-.services-list__item ul {
-  position: relative;
-  width: 160px;
-  background: url('../img/svg/shevron-blue-down.svg') 95px 2px / 12px 24px no-repeat;
-  transition: all 0.7s ease 0s;
-}
-
-.services-list__item-empty {
-  width: 100%;
-  height: 50px;
-}
-li.services-list__item:hover ~ li.services-list__item {
   position: absolute;
-  top: 126px;
-  cursor: pointer;
+  top: 130px;
 }
 
-.services-list__item:hover p {
-  text-decoration: underline;
+.services-list__item span img {
+  vertical-align: 5%;
 }
 
 .services-list__item ul li {
-  text-indent: 5px;
+  width: 155px;
+  height: 26px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+  color: #1d252e;
+  padding-left: 7px;
   opacity: 0;
-  position: absolute;
-  top: 18px;
-  left: 0px;
   transition: all 0.7s ease 0s;
 }
 
-.services-list__item:hover .item-1 {
-  opacity: 1;
-  top: 18px;
+.services-list__item p:hover {
+  cursor: pointer;
 }
 
-.services-list__item:hover .item-2 {
+.services-list__item:hover li {
   opacity: 1;
-  top: 36px;
 }
 
-.services-list__item:hover .item-3 {
-  opacity: 1;
-  top: 54px;
+li.services-list__item:has(p:hover) + [data-content='Аквачистка_1'] {
+  top: 182px;
+  transition: top 0.7s ease 0s;
 }
 
-.services-list__item:hover .item-4 {
-  opacity: 1;
-  top: 72px;
+li.services-list__item:has(p:hover) ~ [data-content='Ремонт_одежды_1'] {
+  top: 208px;
+  transition: top 0.7s ease 0s;
 }
 
-.services-list__item:hover .item-5 {
-  opacity: 1;
-  top: 90px;
+li.services-list__item:has(p:hover) ~ [data-content='Химчистка_2'] {
+  top: 234px;
+  transition: top 0.7s ease 0s;
 }
 
-.services-list__item:hover .item-6 {
-  opacity: 1;
-  top: 108px;
-} */
+li.services-list__item:has(p:hover) ~ [data-content='Аквачистка_2'] {
+  top: 260px;
+  transition: top 0.7s ease 0s;
+}
+
+li.services-list__item:has(p:hover) ~ [data-content='Ремонт_одежды_2'] {
+  top: 286px;
+  transition: top 0.7s ease 0s;
+}
+
+li.services-list__item:not(p:hover) {
+  transition: all 1s ease 0s;
+}
 
 /*-----  -----*/
 
