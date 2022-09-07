@@ -660,20 +660,18 @@ ul li:nth-child(2) div {
 /*----- SERVICES LIST -----*/
 
 .services-list {
-  width: 157px;
+  width: 175px;
   height: 399px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #0084ca;
   margin-top: 10px;
 }
 
 .services-list ul {
   width: 100%;
   position: relative;
+}
+
+.services-list ul > li {
+  width: 100%;
 }
 
 .services-list ul li.services-list__item:nth-child(1) {
@@ -683,27 +681,27 @@ ul li:nth-child(2) div {
 
 .services-list ul li.services-list__item:nth-child(2) {
   position: absolute;
-  top: 26px;
+  top: 37px;
 }
 
 .services-list ul li:nth-child(3) {
   position: absolute;
-  top: 52px;
+  top: 74px;
 }
 
 .services-list ul li:nth-child(4) {
   position: absolute;
-  top: 78px;
+  top: 111px;
 }
 
 .services-list ul li:nth-child(5) {
   position: absolute;
-  top: 104px;
+  top: 148px;
 }
 
 .services-list ul li:nth-child(6) {
   position: absolute;
-  top: 130px;
+  top: 185px;
 }
 
 .services-list__item span img {
@@ -711,49 +709,126 @@ ul li:nth-child(2) div {
 }
 
 .services-list__item ul li {
-  width: 155px;
-  height: 26px;
+  width: 100%;
+  height: 32px;
+  opacity: 0;
+  text-decoration: none;
+  margin-bottom: 5px;
+  padding: 3px 8px;
+  transition: all 0.7s ease 0s;
+}
+
+.services-list__item p a {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #0084ca;
+  text-decoration: none;
+}
+
+.services-list__item ul li a {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   align-items: center;
   color: #1d252e;
-  padding-left: 7px;
-  opacity: 0;
-  transition: all 0.7s ease 0s;
+  text-decoration: none;
 }
 
 .services-list__item p:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .services-list__item:hover li {
   opacity: 1;
+  background: url('../img/svg/bg-service-list-hovered.svg') center center / 175px 32px no-repeat;
 }
 
+.services-list__item:focus li {
+  opacity: 1;
+  background: url('../img/svg/bg-service-list-focused.svg') center center / 175px 32px no-repeat;
+}
+
+/*----- Chevron in enaible case -----*/
+
+[data-content='Химчистка_1'] p {
+  background: url('../img/svg/shevron-blue-down.svg') 99px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Химчистка_2'] p {
+  background: url('../img/svg/shevron-blue-down.svg') 99px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Аквачистка_1'] p {
+  background: url('../img/svg/shevron-blue-down.svg') 107px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Аквачистка_2'] p {
+  background: url('../img/svg/shevron-blue-down.svg') 107px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Ремонт_одежды_1'] p {
+  background: url('../img/svg/shevron-blue-down.svg') 143px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Ремонт_одежды_2'] p {
+  background: url('../img/svg/shevron-blue-down.svg') 143px 1px / 12px 24px no-repeat;
+}
+
+/*-----  Chevron in pressed case  -----*/
+
+[data-content='Химчистка_1']:has(a:active) p {
+  background: url('../img/svg/shevron-blue-up.svg') 99px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Химчистка_2']:has(a:active) p {
+  background: url('../img/svg/shevron-blue-up.svg') 99px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Аквачистка_1']:has(a:active) p {
+  background: url('../img/svg/shevron-blue-up.svg') 107px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Аквачистка_2']:has(a:active) p {
+  background: url('../img/svg/shevron-blue-up.svg') 107px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Ремонт_одежды_1']:has(a:active) p {
+  background: url('../img/svg/shevron-blue-up.svg') 143px 1px / 12px 24px no-repeat;
+}
+
+[data-content='Ремонт_одежды_2']:has(a:active) p {
+  background: url('../img/svg/shevron-blue-up.svg') 143px 1px / 12px 24px no-repeat;
+}
+
+/*-----  -----*/
+
 li.services-list__item:has(p:hover) + [data-content='Аквачистка_1'] {
-  top: 182px;
+  top: 243px;
   transition: top 0.7s ease 0s;
 }
 
 li.services-list__item:has(p:hover) ~ [data-content='Ремонт_одежды_1'] {
-  top: 208px;
+  top: 280px;
   transition: top 0.7s ease 0s;
 }
 
 li.services-list__item:has(p:hover) ~ [data-content='Химчистка_2'] {
-  top: 234px;
+  top: 317px;
   transition: top 0.7s ease 0s;
 }
 
 li.services-list__item:has(p:hover) ~ [data-content='Аквачистка_2'] {
-  top: 260px;
+  top: 354px;
   transition: top 0.7s ease 0s;
 }
 
 li.services-list__item:has(p:hover) ~ [data-content='Ремонт_одежды_2'] {
-  top: 286px;
+  top: 391px;
   transition: top 0.7s ease 0s;
 }
 
@@ -771,7 +846,7 @@ li.services-list__item:not(p:hover) {
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin-bottom: 8px;
-  width: 716px;
+  width: 696px;
   height: 94px;
 }
 
